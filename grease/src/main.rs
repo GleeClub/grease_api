@@ -235,31 +235,13 @@
 #![recursion_limit = "512"]
 #![feature(drain_filter, backtrace)]
 
-extern crate backtrace;
-extern crate base64;
-extern crate bcrypt;
-extern crate cgi;
-extern crate chrono;
-#[macro_use]
-extern crate diesel;
-extern crate diesel_derive_enum;
-extern crate dotenv;
-extern crate glob;
-extern crate icalendar;
-extern crate itertools;
-extern crate regex;
-extern crate serde;
-extern crate serde_json;
-extern crate url;
-extern crate uuid;
-extern crate zip;
-
 mod auth;
 mod cron;
 mod db;
 mod error;
 pub mod routes;
 mod util;
+mod graphql;
 
 fn main() {
     dotenv::dotenv().ok();

@@ -35,7 +35,7 @@ impl Email {
             .ok_or(GreaseError::ServerError(
                 "No stdin was available for mail.".to_owned(),
             ))?
-            .write_all(self.content.to_string().as_bytes())
+            .write_all(self.content.as_bytes())
             .map_err(|err| {
                 GreaseError::ServerError(format!("Couldn't send an email with mail: {}", err))
             })?;

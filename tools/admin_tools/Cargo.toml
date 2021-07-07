@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 cgi = "0.2"
-mysql = "14.2.0"
+mysql = "16"
 dotenv = "0.14.1"
 
 [target.x86_64-unknown-linux-musl]
